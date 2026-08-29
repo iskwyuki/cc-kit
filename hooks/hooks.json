@@ -1,0 +1,18 @@
+{
+  "description": "cc-kit: セッション開始時に前回の引き継ぎメモを読み込む。読み取り専用でコマンドをブロックしない",
+  "hooks": {
+    "SessionStart": [
+      {
+        "matcher": "startup|clear",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "\"${CLAUDE_PLUGIN_ROOT}\"/hooks/session-handoff-load.sh",
+            "timeout": 10,
+            "statusMessage": "引き継ぎメモを確認中..."
+          }
+        ]
+      }
+    ]
+  }
+}

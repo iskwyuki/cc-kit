@@ -1,0 +1,17 @@
+{
+  "$schema": "https://anthropic.com/claude-code/marketplace.schema.json",
+  "name": "cc-kit",
+  "description": "Claude Code の skill / agent 詰め合わせ",
+  "owner": {
+    "name": "iskwyuki"
+  },
+  "plugins": [
+    {
+      "name": "cc-kit",
+      "description": "skill 14 個と agent 4 個。コードレビュー・PR・Issue・セッション引き継ぎ・worktree 並列開発",
+      "source": "./",
+      "category": "development",
+      "homepage": "https://github.com/iskwyuki/cc-kit"
+    }
+  ]
+}

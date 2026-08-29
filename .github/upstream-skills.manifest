@@ -1,0 +1,26 @@
+# 外部由来 skill の出典記録（形式: <上流リポジトリ> <上流パス> <ローカルパス>）
+#
+# ⚠ 自動追従は行わない。このファイルは「どこから取ってきたか」の記録であり、
+#   これを読んで自動同期する仕組みは無い。
+#
+# 追従しない理由:
+#   - ワンショット skill は一度取り込めば機能する。上流の推敲に毎日追随する価値が薄い
+#   - 自動追従は破壊的変更を持ち込む。実際 grill-me は上流で「別 skill を呼ぶだけの
+#     ラッパー」に作り変えられており、追従していたら壊れていた
+#   - 上流が消すこともある（zoom-out は 2026-06-17 に代替なしで削除された）
+#
+# 上流を見に行きたくなったら、ここの行を手がかりに手で差分を確認して取り込むこと。
+#
+# 追従対象から外したもの:
+#   zoom-out  — 上流が 2026-06-17 (mattpocock/skills e112a6b0) に削除。こちらでも廃止
+#   grill-me  — 上流が 2026-08 に別 skill (grilling) を呼ぶラッパーへ変更。現在の版で凍結
+mattpocock/skills skills/engineering/prototype/SKILL.md skills/prototype/SKILL.md
+mattpocock/skills skills/engineering/prototype/LOGIC.md skills/prototype/LOGIC.md
+mattpocock/skills skills/engineering/prototype/UI.md skills/prototype/UI.md
+vercel-labs/skills skills/find-skills/SKILL.md skills/find-skills/SKILL.md
+anthropics/claude-plugins-community eli5/skills/eli5/SKILL.md skills/eli5/SKILL.md
+
+# html-explain は唯一の「改変フォーク」。上流の html skill を元に、目次の左サイドバー化・
+# ダークモード・Claude Artifact 化の 3 点を加えている。他の行と違い verbatim ではないので、
+# 上流の差分をそのまま当てることはできない。改変内容は NOTICE.md を参照。
+mathbullet/skills plugins/html/skills/html/ skills/html-explain/
