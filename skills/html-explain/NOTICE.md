@@ -2,7 +2,7 @@
 
 この skill は [mathbullet/skills](https://github.com/mathbullet/skills) の `html` skill を元にした **改変版フォーク**です。
 
-本リポジトリの他の外部由来 skill（prototype / find-skills / eli5 / grill-me）はすべて「無改変・verbatim」の選別ミラーですが、**これは違います**。上流の成果物の形態そのものを変えているため、ミラーではなくフォークとして扱ってください。上流の更新を機械的に取り込むことはできません。
+本リポジトリの他の外部由来 skill（prototype / find-skills / eli5 / grilling / grill-me / grill-with-docs / domain-modeling）はすべて「無改変・verbatim」の選別ミラーですが、**これは違います**。上流の成果物の形態そのものを変えているため、ミラーではなくフォークとして扱ってください。上流の更新を機械的に取り込むことはできません。
 
 ## 上流
 

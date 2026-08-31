@@ -6,17 +6,29 @@
 # 追従しない理由:
 #   - ワンショット skill は一度取り込めば機能する。上流の推敲に毎日追随する価値が薄い
 #   - 自動追従は破壊的変更を持ち込む。実際 grill-me は上流で「別 skill を呼ぶだけの
-#     ラッパー」に作り変えられており、追従していたら壊れていた
+#     ラッパー」に作り変えられており、追従していたら壊れていた（2026-08-31 に、
+#     呼び出し先の grilling / domain-modeling ごと取り込むことで解消した）
 #   - 上流が消すこともある（zoom-out は 2026-06-17 に代替なしで削除された）
 #
 # 上流を見に行きたくなったら、ここの行を手がかりに手で差分を確認して取り込むこと。
 #
 # 追従対象から外したもの:
 #   zoom-out  — 上流が 2026-06-17 (mattpocock/skills e112a6b0) に削除。こちらでも廃止
-#   grill-me  — 上流が 2026-08 に別 skill (grilling) を呼ぶラッパーへ変更。現在の版で凍結
 mattpocock/skills skills/engineering/prototype/SKILL.md skills/prototype/SKILL.md
 mattpocock/skills skills/engineering/prototype/LOGIC.md skills/prototype/LOGIC.md
 mattpocock/skills skills/engineering/prototype/UI.md skills/prototype/UI.md
+
+# grilling 系 4 skill は 2026-08-31 に mattpocock/skills 6654f6b6 から一括取得した。
+# grill-me と grill-with-docs は呼び出し先を持つラッパーなので、grilling と
+# domain-modeling を外すと単体で成立しなくなる。差分を取り込むときは 4 つまとめて見ること。
+# 上流の agents/openai.yaml は OpenAI 側の表示名メタデータなので取り込んでいない。
+mattpocock/skills skills/productivity/grilling/SKILL.md skills/grilling/SKILL.md
+mattpocock/skills skills/productivity/grill-me/SKILL.md skills/grill-me/SKILL.md
+mattpocock/skills skills/engineering/grill-with-docs/SKILL.md skills/grill-with-docs/SKILL.md
+mattpocock/skills skills/engineering/domain-modeling/SKILL.md skills/domain-modeling/SKILL.md
+mattpocock/skills skills/engineering/domain-modeling/ADR-FORMAT.md skills/domain-modeling/ADR-FORMAT.md
+mattpocock/skills skills/engineering/domain-modeling/CONTEXT-FORMAT.md skills/domain-modeling/CONTEXT-FORMAT.md
+
 vercel-labs/skills skills/find-skills/SKILL.md skills/find-skills/SKILL.md
 anthropics/claude-plugins-community eli5/skills/eli5/SKILL.md skills/eli5/SKILL.md
 
