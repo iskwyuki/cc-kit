@@ -8,7 +8,7 @@
   "plugins": [
     {
       "name": "cc-kit",
-      "description": "skill 14 個と agent 4 個。コードレビュー・PR・Issue・セッション引き継ぎ・worktree 並列開発",
+      "description": "skill 17 個と agent 4 個。コードレビュー・PR・Issue・セッション引き継ぎ・worktree 並列開発",
       "source": "./",
       "category": "development",
       "homepage": "https://github.com/iskwyuki/cc-kit"

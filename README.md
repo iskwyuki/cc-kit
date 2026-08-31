@@ -11,7 +11,7 @@ claude plugin install cc-kit@cc-kit
 
 install するスコープ（user / project）は選べる。
 
-## skill（14 個）
+## skill（17 個）
 
 ### 自作（9 個）
 
@@ -27,13 +27,16 @@ install するスコープ（user / project）は選べる。
 | `wt-new` | git worktree を切って並列開発を始める入口 |
 | `wt-parallel` | worktree ライフサイクルの正本（作成/破棄・起動/停止・ポート採番・マニフェスト仕様） |
 
-### 外部由来（5 個）
+### 外部由来（8 個）
 
 | skill | 上流 | 形態 |
 |---|---|---|
+| `domain-modeling` | mattpocock/skills | 無改変ミラー（用語集と ADR を書きながら設計する。`grill-with-docs` の呼び出し先） |
 | `eli5` | anthropics/claude-plugins-community | 無改変ミラー |
 | `find-skills` | vercel-labs/skills | 無改変ミラー |
-| `grill-me` | mattpocock/skills | 無改変ミラー（上流 2026-08 より前の版で凍結） |
+| `grill-me` | mattpocock/skills | 無改変ミラー（`grilling` を呼ぶラッパー） |
+| `grill-with-docs` | mattpocock/skills | 無改変ミラー（`grilling` + `domain-modeling` を呼ぶラッパー） |
+| `grilling` | mattpocock/skills | 無改変ミラー（計画や設計をラウンド単位で問い詰める本体） |
 | `html-explain` | mathbullet/skills | 改変フォーク |
 | `prototype` | mattpocock/skills | 無改変ミラー |
 

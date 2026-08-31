@@ -2,7 +2,7 @@
 
 この skill は [mattpocock/skills](https://github.com/mattpocock/skills) からの選別ミラーです（無改変・verbatim）。
 
-- 上流パス: `skills/productivity/grill-me/`
+- 上流パス: `skills/engineering/grill-with-docs/`
 - 上流コミット: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`（コミット日 2026-08-24 14:19:57 UTC / 上流プラグイン version 1.2.3）
 - 取得日: 2026-08-31（JST）
 - 同期: **自動追従は行わない。** 上流を見に行くときは `.github/upstream-skills.manifest` を手がかりに手で差分を確認すること
@@ -11,13 +11,9 @@
 
 ## 単体では完結しない
 
-この skill の中身は `grilling` を呼ぶ 1 行だけで、`/grill-me` という入口を残すためのラッパーです。呼び出し先の [`grilling`](../grilling/) は cc-kit に同梱済みなので、cc-kit を入れていれば `cc-kit:grilling` として解決されます。
+この skill の中身は `grilling` と `domain-modeling` を呼ぶ 1 行だけです。呼び出し先はどちらも cc-kit に同梱済みで（[`grilling`](../grilling/) / [`domain-modeling`](../domain-modeling/)）、cc-kit を入れていれば `cc-kit:grilling` `cc-kit:domain-modeling` として解決されます。
 
-`disable-model-invocation: true` が付いているため model 側の skill 一覧には出ません。`/grill-me` から明示的に呼ぶ用途です。
-
-## 経緯
-
-2026-08-23 時点では「上流がラッパー化したので追従を止め、単体で完結する旧版で凍結する」としていた。2026-08-31 にこの判断を撤回し、呼び出し先の `grilling` ごと取り込む形へ切り替えた。旧凍結版は削除済み。
+`disable-model-invocation: true` が付いているため model 側の skill 一覧には出ません。`/grill-with-docs` から明示的に呼ぶ用途です。grill しながら ADR と用語集（`CONTEXT.md` / `docs/adr/`）を書き足していく点が `grill-me` との違いです。
 
 ## License (upstream)
 

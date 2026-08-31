@@ -2,22 +2,18 @@
 
 この skill は [mattpocock/skills](https://github.com/mattpocock/skills) からの選別ミラーです（無改変・verbatim）。
 
-- 上流パス: `skills/productivity/grill-me/`
+- 上流パス: `skills/productivity/grilling/`
 - 上流コミット: `6654f6b60cd9d5be8b54c6fafe44346dabeb3b76`（コミット日 2026-08-24 14:19:57 UTC / 上流プラグイン version 1.2.3）
 - 取得日: 2026-08-31（JST）
 - 同期: **自動追従は行わない。** 上流を見に行くときは `.github/upstream-skills.manifest` を手がかりに手で差分を確認すること
-- 取り込まなかった上流ファイル: `agents/openai.yaml`（OpenAI 側エージェント基盤の表示名メタデータ。SKILL.md からは参照されず Claude Code では読まれない）
+- 取り込まなかった上流ファイル: `agents/openai.yaml`（OpenAI 側エージェント基盤の表示名メタデータ。SKILL.md からは参照されず Claude Code では読まれない。他の選別ミラー（prototype）と同じ扱い）
 - 本ファイル（NOTICE.md）は同期対象外のローカル追加ファイル
-
-## 単体では完結しない
-
-この skill の中身は `grilling` を呼ぶ 1 行だけで、`/grill-me` という入口を残すためのラッパーです。呼び出し先の [`grilling`](../grilling/) は cc-kit に同梱済みなので、cc-kit を入れていれば `cc-kit:grilling` として解決されます。
-
-`disable-model-invocation: true` が付いているため model 側の skill 一覧には出ません。`/grill-me` から明示的に呼ぶ用途です。
 
 ## 経緯
 
-2026-08-23 時点では「上流がラッパー化したので追従を止め、単体で完結する旧版で凍結する」としていた。2026-08-31 にこの判断を撤回し、呼び出し先の `grilling` ごと取り込む形へ切り替えた。旧凍結版は削除済み。
+2026-08-23 に「上流の grill-me がラッパー化したため現行版で凍結する」と決めたが、2026-08-31 にこれを撤回し、上流の grilling 系（`grilling` / `grill-me` / `grill-with-docs` / `domain-modeling`）を最新版で取り込んだ。凍結していた旧 grill-me（単体で完結する版）は削除済み。
+
+**質問の出し方が変わっている。** 旧 grill-me は「1 問ずつ」だったが、grilling は依存関係の解けた質問をまとめて出す「ラウンド単位」になっている。凍結を選んだ当時の理由はまさにこの食い違いだったので、運用側のルール（グローバル CLAUDE.md 等）が「1 問ずつ」を前提にしている場合は、そちらを実態に合わせること。
 
 ## License (upstream)
 
