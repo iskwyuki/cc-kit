@@ -4,5 +4,7 @@
 - 配布物（`skills/` / `agents/` / `hooks/`）を変更したら `.claude-plugin/plugin.json` の version を bump する
 - **`git add -A` / `git add .` は禁止。コミットは明示パス指定のみ**（ランタイム状態ファイルの混入を防ぐ）
 - `hooks/` に置くのは**ブロックしない読み取り専用 hook だけ**。コマンドを止める hook は配布しない
+- `skills/wt-parallel/scripts/` か `skills/session-handoff/handoff.sh` を変更したら `tests/` を通してから commit する
+- テストは `HOME` / `GIT_CONFIG_GLOBAL` / `GIT_CONFIG_SYSTEM` を必ず差し替える。実端末の `~/.gitconfig` を汚した事故がある
 - 外部由来 skill は無改変ミラーを原則とする。改変したものは skill 直下の `NOTICE.md` に改変内容を書く
 - 出典は `.github/upstream-skills.manifest` に記録する。上流への自動追従は行わない

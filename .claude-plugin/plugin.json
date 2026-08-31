@@ -2,7 +2,7 @@
   "$schema": "https://anthropic.com/claude-code/plugin.schema.json",
   "name": "cc-kit",
   "description": "Claude Code の skill / agent 詰め合わせ。コードレビュー・PR・Issue・セッション引き継ぎ・worktree 並列開発をまとめて配る",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "author": {
     "name": "iskwyuki"
   },
